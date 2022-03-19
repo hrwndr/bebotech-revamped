@@ -1,0 +1,32 @@
+footer {
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        .info {
+            width: 60%;
+            .socialLinks {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                li {
+                    margin: 6px 6px;
+                    i {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+        .links {
+            list-style: none;
+        }
+    }
+    .bottom {
+        background-color: $primary-color;
+        text-align: center;
+        padding: 5px 0px;
+        color: #fff;
+    }
+}

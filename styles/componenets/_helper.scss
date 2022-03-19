@@ -1,0 +1,51 @@
+.fbold {
+    font-weight: bold;
+}
+.fmedium {
+    font-weight: 600;
+}
+.color-secondary {
+    color: $secondary-color;
+}
+.color-primary {
+    color: $primary-color;
+}
+.underline {
+    text-decoration: underline;
+}
+.italic {
+    font-style: italic;
+}
+.button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 0px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    &:hover {
+        box-shadow: 1px 2px #c2c2c2;
+        transition: 0.2s ease-in-out;
+    }
+}
+.primary {
+    background-color: $primary-color;
+    color: $bg-color;
+    &:hover {
+        color: $bg-color;
+    }
+}
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.pill {
+    font-weight: 600;
+    cursor: pointer;
+    padding: 3px 10px;
+    border-radius: 50px;
+}
+.pill-active {
+    background-color: $primary-color;
+    color: $bg-color;
+}
