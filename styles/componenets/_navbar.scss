@@ -74,4 +74,16 @@ nav {
             }
         }
     }
+    @media only screen and (max-width: 650px) {
+        .menu {
+            ul {
+                li.more {
+                    i {
+                        content: "";
+                        color: $bg-color;
+                    }
+                }
+            }
+        }
+    }
 }

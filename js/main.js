@@ -73,23 +73,26 @@ const changePillValue = (section, value) => {
 
 const NavbarResizing = () => {
     let len = navItems.length - 1
-    let removedIndexes = []
 
-    if (navItems.length > 5) {
-        navItems.forEach((el, i) => {
-            let link = el.innerHTML
-            console.log(link)
-            if (i != len) {
-                if (i > 3) {
-                    moreMenu.innerHTML += link
-                    removedIndexes.push(i)
+    if (window.innerWidth > 900) {
+        let removedIndexes = []
+
+        if (navItems.length > 5) {
+            navItems.forEach((el, i) => {
+                let link = el.innerHTML
+                console.log(link)
+                if (i != len) {
+                    if (i > 3) {
+                        moreMenu.innerHTML += link
+                        removedIndexes.push(i)
+                    }
                 }
-            }
-        })
+            })
 
-        removedIndexes.forEach(el => navItems[el].remove())
-    } else {
-        moreBtn.style.display = 'none'
+            removedIndexes.forEach(el => navItems[el].remove())
+        } else {
+            moreBtn.style.display = 'none'
+        }
     }
 
     if (window.innerWidth < 900 && window.innerWidth > 750) {
