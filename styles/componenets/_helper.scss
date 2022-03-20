@@ -48,4 +48,11 @@
 .pill-active {
     background-color: $primary-color;
     color: $bg-color;
+    @media only screen and (max-width: 500px) {
+        background-color: $bg-color;
+        color: $primary-color;
+        border: 0;
+        border-bottom: 2px solid $secondary-color;
+        border-radius: 0px;
+    }
 }

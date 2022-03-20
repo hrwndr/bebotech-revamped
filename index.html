@@ -18,7 +18,7 @@
                     <span class="tagline">be extension beoffshore</span>
                 </a>
             </div>
-            <!-- <div class="menu">
+            <div class="menu">
                 <ul>
                     <li>
                         <a href="#services">Services</a>
@@ -32,16 +32,15 @@
                     <li>
                         <a href="#lifeatbebo">Life@bebo</a>
                     </li>
+                    <li>
+                        <a href="https://github.com/hrwndr/bebotech-revamped" target="_blank">Github</a>
+                    </li>
                     <li class="more">
                         <a href="#more"><i class="fa-solid fa-caret-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
-                        </div>
+                        <div class="dropdown-content"></div>
                     </li>
                 </ul>
-            </div> -->
+            </div>
         </nav>
         <section id="home">
             <div class="leftSide">
@@ -127,12 +126,13 @@
             </span>
             <p>Our team is our greatest asset. We consistently invest in and around our team members to make sure
                 they are set up for success and share bebo Technologies dedication to excellence.</p>
-            <ul class="menu">
-                <li class="pill pill-active">CSR</li>
-                <li class="pill">AWARDS</li>
-                <li class="pill">EVENTS</li>
-                <li class="pill">WORK LIFE BALANCE</li>
-                <li class="pill">RECOGNITION</li>
+            <ul class="menu valuesMenu">
+                <li class="pill pill-active csr" onclick="changePillValue('values', 'csr')">CSR</li>
+                <li class="pill awards" onclick="changePillValue('values', 'awards')">AWARDS</li>
+                <li class="pill events" onclick="changePillValue('values', 'events')">EVENTS</li>
+                <li class="pill worklifebalance" onclick="changePillValue('values', 'worklifebalance')">WORK LIFE
+                    BALANCE</li>
+                <li class="pill recognition" onclick="changePillValue('values', 'recognition')">RECOGNITION</li>
             </ul>
             <div class="gallery">
                 <img src="img/csr-1.png" alt="CSR">
@@ -201,11 +201,14 @@
                 <span class="heading">
                     Life@<span class="fbold">bebo</span>
                 </span><br />
-                <ul class="menu">
-                    <li class="pill pill-active">Why Join bebo?</li>
-                    <li class="pill">Work Culture</li>
+                <ul class="menu lifeatbeboMenu">
+                    <li class="pill pill-active whybebo" onclick="changePillValue('lifeatbebo', 'whybebo')">Why Join
+                        bebo?</li>
+                    <li class="pill workculture" onclick="changePillValue('lifeatbebo', 'workculture')">Work Culture
+                    </li>
                 </ul>
-                <p>We believe our team is our greatest asset. From top to bottom, our staff’s professionalism,
+                <p class="lifeatbebo-pill-output">We believe our team is our greatest asset. From top to bottom, our
+                    staff’s professionalism,
                     innovation, capabilities, teamwork and dedication to excellence have been essential to our past
                     achievements and are vital to our future success. We offer our team members the most exciting and
                     challenging projects across a diverse range of industries and platforms.</p>
@@ -226,10 +229,10 @@
                         <img src="img/bebo-logo.png" alt="Bebo Technologies" />
                     </div>
                     <div class="info">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aliquid quam assumenda ut
-                            impedit.
-                            Harum sapiente explicabo deleniti praesentium, incidunt delectus officia quia nihil aliquam
-                            consequatur ipsum velit eveniet. Cum.</p>
+                        <p>We have a dedicated group of vastly experienced and skilled professionals who consistently
+                            research, evaluate, and develop state-of-the-art solutions with the newest tools and
+                            technologies.
+                        </p>
                         <ul class="socialLinks">
                             <li>
                                 <a href="https://facebook.com/hrwndr" target="_blank">

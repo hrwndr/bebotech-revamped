@@ -31,6 +31,12 @@ html body main {
   min-width: 100vw;
 }
 
+@media only screen and (max-width: 500px) {
+  html body {
+    background: none;
+  }
+}
+
 .fbold {
   font-weight: bold;
 }
@@ -94,6 +100,16 @@ html body main {
 .pill-active {
   background-color: #143b65;
   color: #fff;
+}
+
+@media only screen and (max-width: 500px) {
+  .pill-active {
+    background-color: #fff;
+    color: #143b65;
+    border: 0;
+    border-bottom: 2px solid #F58331;
+    border-radius: 0px;
+  }
 }
 
 nav {
@@ -206,6 +222,7 @@ section#home .leftSide {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  margin-left: 5%;
 }
 
 section#home .leftSide img {
@@ -495,10 +512,7 @@ section#values .gallery img {
     max-width: 120px;
   }
   section#values .heading {
-    font-size: 1.6rem;
-  }
-  section#values p {
-    font-size: 12px;
+    font-size: 1.7rem;
   }
 }
 
@@ -511,13 +525,13 @@ section#values .gallery img {
     max-width: 180px;
   }
   section#values .heading {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   section#values p {
-    font-size: 10px;
+    font-size: 12px;
   }
   section#values .menu li {
-    font-size: 60%;
+    font-size: 70%;
   }
 }
 
@@ -529,7 +543,7 @@ section#values .gallery img {
     font-size: 10px;
   }
   section#values .menu li {
-    font-size: 40%;
+    font-size: 60%;
   }
 }
 
