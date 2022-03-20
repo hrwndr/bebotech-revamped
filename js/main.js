@@ -15,7 +15,8 @@ window.onscroll = function () {
 }
 
 const splide = new Splide('.splide', {
-    autoplay: true
+    autoplay: true,
+    type: 'loop',
+    width: '90vw'
 })
-splide.on('autoplay', e => console.log(e))
 splide.mount()

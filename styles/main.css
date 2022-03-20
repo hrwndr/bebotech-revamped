@@ -10,7 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+html body {
   font-family: 'Poppins', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -18,13 +18,17 @@ body {
   background: url("../img/Blob1.png") 0 10% no-repeat, url("../img/Blob2.png") 100% 40% no-repeat, url("../img/Blob3.png") 0% 60% no-repeat, url("../img/Blob2.png") 100% 85% no-repeat, url("../img/Blob1.png") -1% 95% no-repeat;
 }
 
-body a {
+html body a {
   text-decoration: none;
   color: #143b65;
 }
 
-body a:hover {
+html body a:hover {
   color: #F58331;
+}
+
+html body main {
+  min-width: 100vw;
 }
 
 .fbold {
@@ -184,7 +188,8 @@ nav .menu ul li.more:hover .dropdown-content {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
+  margin: auto;
 }
 
 section#home {
@@ -204,7 +209,8 @@ section#home .leftSide {
 }
 
 section#home .leftSide img {
-  width: 500px;
+  width: 80%;
+  height: auto;
 }
 
 section#home .rightSide {
@@ -270,21 +276,25 @@ section#home .rightSide .careerBtns a {
 }
 
 @media only screen and (max-width: 480px) {
+  section#home .leftSide {
+    margin: 0px;
+    padding: 0px;
+  }
   section#home .leftSide img {
     width: 300px;
   }
   section#home .rightSide {
-    margin: 0px 30px;
+    margin: 0px 20px;
   }
   section#home .rightSide h1 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   section#home .rightSide p {
     font-size: 0.75rem;
   }
   section#home .rightSide .careerBtns a {
-    padding: 5px 5px;
-    font-size: 1rem;
+    padding: 5px 7px;
+    font-size: 0.85rem;
   }
 }
 
@@ -367,6 +377,12 @@ section#services .rightSide .service p {
   }
   section#services .rightSide {
     margin: 30px 0px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 5px;
+            column-gap: 5px;
   }
   section#services .rightSide h1 {
     font-size: 1.8rem;
@@ -377,14 +393,6 @@ section#services .rightSide .service p {
 }
 
 @media only screen and (max-width: 600px) {
-  section#services .rightSide {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 5px;
-            column-gap: 5px;
-  }
   section#services .rightSide h1 {
     font-size: 1rem;
   }
@@ -393,6 +401,22 @@ section#services .rightSide .service p {
   }
   section#services .rightSide .icon .heading {
     font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  section#services .rightSide {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  section#services .rightSide h1 {
+    font-size: 0.8rem;
+  }
+  section#services .rightSide p {
+    font-size: 0.8rem;
+  }
+  section#services .rightSide .icon .heading {
+    font-size: 0.6rem;
   }
 }
 
@@ -427,6 +451,86 @@ section#values .menu {
 
 section#values .menu li {
   margin: 0px 10px;
+}
+
+section#values .gallery img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  section#values .gallery img {
+    max-width: 180px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  section#values .gallery img {
+    max-width: 140px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  section#values .heading {
+    font-size: 1.8rem;
+  }
+  section#values p {
+    font-size: 14px;
+  }
+  section#values .menu li {
+    margin: 0px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  section#values .gallery {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+  section#values .gallery img {
+    max-width: 120px;
+  }
+  section#values .heading {
+    font-size: 1.6rem;
+  }
+  section#values p {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  section#values .gallery {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  section#values .gallery img {
+    max-width: 180px;
+  }
+  section#values .heading {
+    font-size: 1.4rem;
+  }
+  section#values p {
+    font-size: 10px;
+  }
+  section#values .menu li {
+    font-size: 60%;
+  }
+}
+
+@media only screen and (max-width: 407px) {
+  section#values .heading {
+    font-size: 1.4rem;
+  }
+  section#values p {
+    font-size: 10px;
+  }
+  section#values .menu li {
+    font-size: 40%;
+  }
 }
 
 section#testimonials {
@@ -464,10 +568,9 @@ section#testimonials .testimonial {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 0 auto;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -481,6 +584,30 @@ section#testimonials .testimonial p {
 
 section#testimonials .testimonial p span {
   float: right;
+}
+
+section#testimonials .testimonial .dp img {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 550px) {
+  section#testimonials {
+    margin: 10% 0%;
+  }
+  section#testimonials .heading {
+    font-size: 1.5rem;
+  }
+  section#testimonials .testimonial {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section#testimonials p {
+    width: 100%;
+    font-size: 0.8rem;
+  }
 }
 
 section#lifeatbebo {
@@ -537,6 +664,42 @@ section#lifeatbebo .rightSide .video {
 section#lifeatbebo .rightSide .video iframe {
   width: 450px;
   height: 250px;
+}
+
+@media only screen and (max-width: 900px) {
+  section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section .leftSide .heading {
+    font-size: 1.8rem;
+  }
+  section .leftSide .menu {
+    margin: 12px 0px;
+  }
+  section .leftSide p {
+    font-size: 0.9rem;
+    width: 85%;
+  }
+  section .rightSide {
+    margin: 10% 0%;
+  }
+  section .rightSide .video iframe {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  section .leftSide .heading {
+    font-size: 1.4rem;
+  }
+  section .leftSide p {
+    width: 95%;
+    font-size: 0.5rem;
+  }
 }
 
 .downArrow {
@@ -606,6 +769,27 @@ footer .top .info .socialLinks li i {
 
 footer .top .links {
   list-style: none;
+}
+
+@media only screen and (max-width: 600px) {
+  footer .top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  footer .top .logo img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  footer .top .info {
+    width: 90%;
+  }
 }
 
 footer .bottom {

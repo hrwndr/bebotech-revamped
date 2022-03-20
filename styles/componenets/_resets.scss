@@ -7,18 +7,20 @@
 }
 html {
     scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    a {
-        text-decoration: none;
-        color: $primary-color;
-        &:hover {
-            color: $secondary-color;
+    body {
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        a {
+            text-decoration: none;
+            color: $primary-color;
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+        background: url('../img/Blob1.png') 0 10% no-repeat, url('../img/Blob2.png') 100% 40% no-repeat, url('../img/Blob3.png') 0% 60% no-repeat, url('../img/Blob2.png') 100% 85% no-repeat, url('../img/Blob1.png') -1% 95% no-repeat;
+        main {
+            min-width: 100vw;
         }
     }
-    background: url('../img/Blob1.png') 0 10% no-repeat, url('../img/Blob2.png') 100% 40% no-repeat, url('../img/Blob3.png') 0% 60% no-repeat, url('../img/Blob2.png') 100% 85% no-repeat, url('../img/Blob1.png') -1% 95% no-repeat;
 }

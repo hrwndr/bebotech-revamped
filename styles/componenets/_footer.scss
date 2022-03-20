@@ -22,6 +22,21 @@ footer {
         .links {
             list-style: none;
         }
+        @media only screen and (max-width: 600px) {
+            flex-direction: column;
+            justify-content: space-around;
+            .logo {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        @media only screen and (max-width: 400px) {
+            .info {
+                width: 90%;
+            }
+        }
     }
     .bottom {
         background-color: $primary-color;
