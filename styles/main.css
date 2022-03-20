@@ -274,6 +274,7 @@ section#home .rightSide .careerBtns a {
     margin: 80px auto;
   }
   section#home .leftSide img {
+    max-height: 55vh;
     width: 300px;
   }
   section#home .rightSide {
@@ -516,7 +517,7 @@ section#values .gallery img {
     gap: 5px;
   }
   section#values .gallery img {
-    max-width: 120px;
+    max-width: 180px;
   }
   section#values .heading {
     font-size: 1.7rem;
@@ -524,13 +525,6 @@ section#values .gallery img {
 }
 
 @media only screen and (max-width: 500px) {
-  section#values .gallery {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  section#values .gallery img {
-    max-width: 180px;
-  }
   section#values .heading {
     font-size: 1.6rem;
   }
@@ -542,12 +536,10 @@ section#values .gallery img {
   }
 }
 
-@media only screen and (max-width: 407px) {
-  section#values .heading {
-    font-size: 1.4rem;
-  }
-  section#values p {
-    font-size: 10px;
+@media only screen and (max-width: 400px) {
+  section#values .gallery {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
   section#values .menu li {
     font-size: 60%;
@@ -608,13 +600,13 @@ section#testimonials .testimonial p span {
 }
 
 section#testimonials .testimonial .dp img {
-  width: 100%;
+  width: 90%;
   height: auto;
 }
 
 @media only screen and (max-width: 550px) {
   section#testimonials {
-    margin: 10% 0%;
+    margin: 10% 10%;
   }
   section#testimonials .heading {
     font-size: 1.5rem;

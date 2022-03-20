@@ -80,7 +80,6 @@ const NavbarResizing = () => {
         if (navItems.length > 5) {
             navItems.forEach((el, i) => {
                 let link = el.innerHTML
-                console.log(link)
                 if (i != len) {
                     if (i > 3) {
                         moreMenu.innerHTML += link
